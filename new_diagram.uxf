@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+ fontsize=18
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>0</y>
+      <w>108</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract Class&gt;&gt;
+Enemy
+
+--
+/+	 update()/
+/+ draw(g:Graphics)/
+/+	 getBound():Rectangle/
+/+	 isOutOfScreen():boolean/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>180</y>
+      <w>126</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>
+Cactus
+
+--
+- posX:int
+- width:int
+- height:int
+- image:BufferedImage
+- mainCharacter:MainCharacter 
+- rectBound:Rectangle 
+--
++ Y_LAND:int
++ Cactus(mainCharacter:MainCharacter , posX:int, width:int, height:int , image: BufferedImage)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>180</y>
+      <w>174</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>
+Bullet
+
+--
+-	 posX:int
+-	 width:int
+- 	height:int
+- 	image:BufferedImage
+-	 mainCharacter:MainCharacter 
+-	 rectBound:Rectangle
+--
++ Y_LAND2:int
++ Y_LAND1:int
++ Y_LAND:int
++Bullet(mainCharacter:MainCharacter, posX:int, width:int, height:int,image: BufferedImage , LAND:int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>72</y>
+      <w>18</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>420</y>
+      <w>156</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>
+EnemiesManager
+
+--
+-cactus1:BufferedImage
+-cactus2:BufferedImage
+-rand:Random
+-bullet:BufferedImage
+-meteor:BufferedImage  	
+-enemies:List &lt;Enemy&gt; 
+-mainCharacter:MainCharacter 
+--
++EnemiesManager(mainCharacter:MainCharacter)
++update() 
++draw(g:Graphics)
++createEnemy():Enemy 
++isCollision():boolean
++reset()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>108</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>102</y>
+      <w>234</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>102</y>
+      <w>198</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>108</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>312</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>318</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>378</y>
+      <w>222</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>378</y>
+      <w>210</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>318</y>
+      <w>90</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+створення ворогів</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>180</y>
+      <w>132</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>
+Meteor
+
+--
+-posX :int
+-width:int
+-height:int
+-posY:int
+-image:BufferedImage
+ mainCharacter:MainCharacter	
+-rectBound:Rectangle
+--
++Y_LAND:int	
++Meteor(mainCharacter:MainCharacter, posX:int, posY:int, width:int, height:int, image:BufferedImage )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>642</y>
+      <w>156</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>
+GameScreen
+
+--
+-START_GAME_STATE:int
+-GAME_PLAYING_STATE:int
+-GAME_OVER_STATE:int
+-currentFont:Font
+-land:Land;
+-mainCharacter: MainCharacter
+-enemiesManager:EnemiesManager 
+-clouds:Clouds 
+-thread:Thread 
+-g:Graphics 
+-isKeyPressed:boolean
+-gameState:int
+-replayButtonImage:BufferedImage 
+-gameOverButtonImage:BufferedImage 
+--
++egg:boolean
++GameScreen()
++startGame() 
++gameUpdate()
++paint(g:Graphics) 
++run()
++keyPressed(e:KeyEvent )
++keyReleased(e:KeyEvent ) 
++keyTyped(e:KeyEvent )
++resetGame()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>558</y>
+      <w>126</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+створення об'єктів на екрані</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>12</x>
+      <y>444</y>
+      <w>150</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>
+Land
+
+--
+-listLand:List&lt;ImageLand&gt; 
+-land1:BufferedImage 
+-land2:BufferedImage 
+-land3:BufferedImage 
+-mainCharacter:MainCharacter 
+--
++LAND_POSY:int
++Land(width:int,mainCharacter:MainCharacter )
++update()
++setImageLand(imgLand:ImageLand )
++draw(g:Graphics)
++getTypeOfLand():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>582</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>600</y>
+      <w>468</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>760.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>456</y>
+      <w>150</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>
+Clouds
+
+--
+-listCloud:List&lt;ImageCloud&gt; 
+-cloud;:BufferedImage 
+-mainCharacter:MainCharacter 
+--
++Clouds(width:int ,mainCharacter:MainCharacter) 
++update()
++draw(g:Graphics)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>600</y>
+      <w>312</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>500.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>822</x>
+      <y>426</y>
+      <w>126</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>
+MainCharacter
+--
+-NORMAL_RUN:int 
+-JUMPING:int 
+-DOWN_RUN:int 
+-DEATH:int 
+-EGG:boolean 
+-START_SPEED:float 
+-posY:float 
+-posX:float 
+-speedX:float 
+-speedY:float 
+-rectBound:Rectangle 
+-state:int
+-normalRunAnim:Animation 
+-jumping:BufferedImage 
+-downRunAnim:Animation 
+-deathImage:BufferedImage 
+--
++LAND_POSY:int 
++GRAVITY:float
++score:int 
++hiscore:int 
++MainCharacter() 
++getSpeedX():float 
++setSpeedX(speedX:int)
++draw(g:Graphics) 
++update() 
++jump() 
++down(isDown:boolean)
++getBound():Rectangle 
++dead(isDeath:boolean) 
++reset()
++upScore() 
++easterEgg()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>822</x>
+      <y>204</y>
+      <w>132</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+Animation
+
+--
+-list:List&lt;BufferedImage&gt;
+-deltaTime:long 
+-currentFrame:int 
+-previousTime:long 
+--
++Animation(deltaTime:int) 
++updateFrame()
++addFrame(image:BufferedImage)
++getFrame():BufferedImage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>318</y>
+      <w>18</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>894</x>
+      <y>354</y>
+      <w>66</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Робить так, що головний герой "біжить"
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>336</y>
+      <w>78</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Private Class&gt;&gt;
+ImageCloud 
+
+--
+-posX:float
+-posY:int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>396</y>
+      <w>60</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>84</x>
+      <y>396</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Для позиції і вигляду землі
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>324</y>
+      <w>90</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Private Class&gt;&gt;
+ImageLand
+
+--
+-posX:float 
+-image:BufferedImage 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>384</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>276</x>
+      <y>420</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Для позиції хмаринок
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>696</y>
+      <w>186</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>
+Resource
+
+--
++getResouceImage(path:String):BufferedImage </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>606</y>
+      <w>144</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Використання спрайтів з файлів</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>966</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>
+GameWindow
+
+--
+-gameScreen:GameScreen 
+--
++SCREEN_WIDTH:int
++GameWindow()
++startGame()
++main(args[]:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>894</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+створення вікна програми</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>582</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>600</y>
+      <w>138</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>282</x>
+      <y>552</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>
